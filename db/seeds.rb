@@ -12,27 +12,41 @@ end
 
 Category.delete_all
 books = Category.create name: 'Books'
+b2b = Category.create name: 'B2B / Office'
 music_games_movies_and_tv = Category.create name: 'Music, Games, Movies & TV'
 electronics_and_computers = Category.create name: 'Electronics & Computers'
 home_garden_pets_and_diy = Category.create name: 'Home, Garden, Pets & DIY'
 toys_children_and_baby = Category.create name: 'Toys, Children & Baby'
 clothes_shoes_and_jewellery = Category.create name: 'Clothes, Shoes & Jewellery'
 sports_and_outdoors = Category.create name: 'Sports & Outdoors'
-grocery_health_and_beauty = Category.create name: 'Grocery, Health & Beauty'
+health_and_beauty = Category.create name: 'Health & Beauty'
+local_classes_and_services = Category.create name: 'Local, Classes & Services'
 car_and_motorbike = Category.create name: 'Car & Motorbike'
 
 Business.delete_all
 Business.create company_name: 'Waterstones', email: 'ceo@waterstones.com', password: '123456789', password_confirmation: '123456789', category: books, avatar: seed_image('waterstones_avatar.gif')
-Business.create company_name: 'Bookplace', email: 'ceo@bookplace.com', password: '123456789', password_confirmation: '123456789', category: books, avatar: seed_image('blackwell.jpeg')
+Business.create company_name: 'Blackwell', email: 'ceo@blackwell.com', password: '123456789', password_confirmation: '123456789', category: books, avatar: seed_image('blackwell.jpeg')
 Business.create company_name: 'HMV', email: 'ceo@hmv.com', password: '123456789', password_confirmation: '123456789', category: music_games_movies_and_tv, avatar: seed_image('hmv.jpg')
 Business.create company_name: 'Virgin', email: 'ceo@virgin.com', password: '123456789', password_confirmation: '123456789', category: music_games_movies_and_tv, avatar: seed_image('virgin.jpg')
 Business.create company_name: 'Apple', email: 'ceo@apple.com', password: '123456789', password_confirmation: '123456789', category: electronics_and_computers, avatar: seed_image('apple.jpg')
+Business.create company_name: 'Sony', email: 'ceo@sony.com', password: '123456789', password_confirmation: '123456789', category: electronics_and_computers, avatar: seed_image('sony.gif')
+Business.create company_name: 'Beats by Dre', email: 'ceo@beatsbydre.com', password: '123456789', password_confirmation: '123456789', category: electronics_and_computers, avatar: seed_image('beats.jpg')
 Business.create company_name: 'Toys R Us', email: 'ceo@toysrus.com', password: '123456789', password_confirmation: '123456789', category: toys_children_and_baby, avatar: seed_image('toysrus.jpg')
+Business.create company_name: 'Converse', email: 'ceo@converse.com', password: '123456789', password_confirmation: '123456789', category: clothes_shoes_and_jewellery, avatar: seed_image('converse.png')
 Business.create company_name: 'Burberry', email: 'ceo@burberry.com', password: '123456789', password_confirmation: '123456789', category: clothes_shoes_and_jewellery, avatar: seed_image('burberry.jpg')
+Business.create company_name: 'Superdry', email: 'ceo@superdry.com', password: '123456789', password_confirmation: '123456789', category: clothes_shoes_and_jewellery, avatar: seed_image('superdry_avatar.png')
 Business.create company_name: 'Wilson', email: 'ceo@wilson.com', password: '123456789', password_confirmation: '123456789', category: sports_and_outdoors, avatar: seed_image('wilson.jpg')
 Business.create company_name: 'Adidas', email: 'ceo@adidas.com', password: '123456789', password_confirmation: '123456789', category: sports_and_outdoors, avatar: seed_image('adidas_avatar.gif')
-Business.create company_name: 'Origins', email: 'ceo@origins.com', password: '123456789', password_confirmation: '123456789', category: grocery_health_and_beauty, avatar: seed_image('origins_logo.jpg')
+Business.create company_name: 'Nike', email: 'ceo@nike.com', password: '123456789', password_confirmation: '123456789', category: sports_and_outdoors, avatar: seed_image('nike_logo.png')
+Business.create company_name: 'MAC Makeup', email: 'ceo@macmakeup.com', password: '123456789', password_confirmation: '123456789', category: health_and_beauty, avatar: seed_image('mac.jpg')
+Business.create company_name: 'Maybelline', email: 'ceo@maybelline.com', password: '123456789', password_confirmation: '123456789', category: health_and_beauty, avatar: seed_image('maybelline.jpg')
+Business.create company_name: 'Olay', email: 'ceo@olay.com', password: '123456789', password_confirmation: '123456789', category: health_and_beauty, avatar: seed_image('olay.jpg')
 Business.create company_name: 'Ford', email: 'ceo@ford.com', password: '123456789', password_confirmation: '123456789', category: car_and_motorbike, avatar: seed_image('ford-logo.jpg')
+Business.create company_name: 'Staples', email: 'ceo@staples.com', password: '123456789', password_confirmation: '123456789', category: b2b, avatar: seed_image('staples.jpg')
+Business.create company_name: 'HP', email: 'ceo@hp.com', password: '123456789', password_confirmation: '123456789', category: b2b, avatar: seed_image('hp_logo.png')
+Business.create company_name: 'Zumba', email: 'ceo@zumba.com', password: '123456789', password_confirmation: '123456789', category: local_classes_and_services, avatar: seed_image('zumba.jpg')
+Business.create company_name: 'Folded Leaf', email: 'ceo@foldedleaf.com', password: '123456789', password_confirmation: '123456789', category: local_classes_and_services, avatar: seed_image('folded_leaf.jpg')
+
 
 # Offer.delete_all
 # Offer.create product: 'Harry Potter and the Philosophers Stone', product_description: 'A delightful romp through happy wizard land with a variety of memorable characters', price: 8, :RRP => 14, business_id: 1, available_from: "13/12/2013", available_to: "21/12/2013", users_time_availablity: 30, avatar: seed_image('Harry_Potter_atps.jpg')
